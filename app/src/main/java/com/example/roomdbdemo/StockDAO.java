@@ -9,11 +9,11 @@ import androidx.room.Update;
 public interface StockDAO {
 
     @Insert
-    Long insertStock(Stock stock);
+    Long insertTask(Stock stock);
 
     @Update
-    void updateStock(Stock stock);
+    void updateTask(Stock stock);
 
     @Delete
-    void deleteStock(Stock stock);
+    void deleteTask(Stock stock);
 }
