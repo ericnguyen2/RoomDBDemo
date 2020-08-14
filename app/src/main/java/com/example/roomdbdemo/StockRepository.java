@@ -4,6 +4,8 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.widget.Toast;
 
+import java.util.List;
+
 import androidx.room.Room;
 
 public class StockRepository {
@@ -36,5 +38,9 @@ public class StockRepository {
         }.execute();
     }
 
-    //
+    // Get Data Task
+    public List<Stock> getStocks() {
+        List<Stock> stockList = stockDatabase.stockDAO().getAll();
+        return stockList;
+    }
 }
