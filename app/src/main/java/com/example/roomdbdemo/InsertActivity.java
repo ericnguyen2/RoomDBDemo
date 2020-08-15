@@ -32,7 +32,7 @@ public class InsertActivity extends AppCompatActivity {
                         || edt_ticker.getText().toString().isEmpty()
                         || edt_quantity.getText().toString().isEmpty()
                         || edt_price.getText().toString().isEmpty()) {
-                    Toast.makeText(getApplicationContext(), "Fill Detail", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Fill Detail.", Toast.LENGTH_LONG).show();
                 } else {
                     sstockno = edt_stockno.getText().toString().trim();
                     sticker = edt_ticker.getText().toString().trim();

@@ -64,6 +64,17 @@
             android:textSize="20sp"
             android:background="@color/colorPrimaryDark"/>
 
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="15dp"
+            android:text="Delete"
+            android:textColor="#FFF"
+            android:textSize="20sp"
+            android:background="@color/colorPrimaryDark"/>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

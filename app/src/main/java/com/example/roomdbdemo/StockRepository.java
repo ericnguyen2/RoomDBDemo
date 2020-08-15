@@ -33,7 +33,7 @@ public class StockRepository {
             @Override
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
-                Toast.makeText(context, stock.ticker + " is inserted", Toast.LENGTH_LONG).show();
+                Toast.makeText(context, stock.ticker + " Added.", Toast.LENGTH_LONG).show();
             }
         }.execute();
     }
@@ -54,4 +54,16 @@ public class StockRepository {
             }
         }.execute();
     }
+
+    // Delete Data Task
+    public void DeleteTask(final Stock stock) {
+        new AsyncTask<Void, Void, Void>(){
+            @Override
+            protected Void doInBackground(Void... voids) {
+                stockDatabase.stockDAO().deleteTask(stock);
+                return null;
+            }
+        }.execute();
+    }
+
 }
