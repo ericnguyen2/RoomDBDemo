@@ -63,4 +63,10 @@ public class ViewActivity extends AppCompatActivity {
             recyclerView.setAdapter(customAdapter);
         }
     }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        new LoadDataTask().execute();
+    }
 }

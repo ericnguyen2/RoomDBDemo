@@ -18,7 +18,7 @@ public class StockRepository {
         this.context = context;
         stockDatabase = Room.databaseBuilder(context, StockDatabase.class, DB_NAME).build();
 
-        Toast.makeText(context, "Database created...", Toast.LENGTH_LONG).show();
+        //Toast.makeText(context, "Database Created...", Toast.LENGTH_LONG).show();
     }
 
     // Insert Task
@@ -42,5 +42,16 @@ public class StockRepository {
     public List<Stock> getStocks() {
         List<Stock> stockList = stockDatabase.stockDAO().getAll();
         return stockList;
+    }
+
+    // Update Data Task
+    public void UpdateTask(final Stock stock) {
+        new AsyncTask<Void, Void, Void>(){
+            @Override
+            protected Void doInBackground(Void... voids) {
+                stockDatabase.stockDAO().updateTask(stock);
+                return null;
+            }
+        }.execute();
     }
 }
