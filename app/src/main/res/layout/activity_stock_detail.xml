@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bk2"
     tools:context=".StockDetailActivity">
 
     <LinearLayout
@@ -62,7 +63,7 @@
             android:text="Update"
             android:textColor="#FFF"
             android:textSize="20sp"
-            android:background="@color/colorPrimaryDark"/>
+            android:background="#0288F3"/>
 
         <Button
             android:id="@+id/btn_delete"
@@ -73,7 +74,7 @@
             android:text="Delete"
             android:textColor="#FFF"
             android:textSize="20sp"
-            android:background="@color/colorPrimaryDark"/>
+            android:background="#0288F3"/>
 
     </LinearLayout>
 
