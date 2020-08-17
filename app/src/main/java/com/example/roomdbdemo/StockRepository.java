@@ -24,7 +24,6 @@ public class StockRepository {
     // Insert Task
     public void InsertTask(final Stock stock) {
         new AsyncTask<Void, Void, Void>(){
-
             boolean error = false;
 
             @Override
