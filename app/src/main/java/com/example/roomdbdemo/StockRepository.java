@@ -24,17 +24,28 @@ public class StockRepository {
     // Insert Task
     public void InsertTask(final Stock stock) {
         new AsyncTask<Void, Void, Void>(){
+
+            boolean error = false;
+
             @Override
             protected Void doInBackground(Void... voids) {
-                stockDatabase.stockDAO().insertTask(stock);
+                try {
+                    stockDatabase.stockDAO().insertTask(stock);
+                } catch (Exception exp) {
+                    error = true;
+                }
                 return null;
             }
 
             @Override
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
-                //Toast.makeText(context, stock.ticker + " Added.", Toast.LENGTH_LONG).show();
-                Toast.makeText(context, "Transaction #" + stock.stockno + " Added.", Toast.LENGTH_LONG).show();
+                if (error) {
+                    Toast.makeText(context, "Transaction Id Already Exists.", Toast.LENGTH_LONG).show();
+                }
+                else {
+                    Toast.makeText(context, "Transaction #" + stock.stockno + " Added.", Toast.LENGTH_LONG).show();
+                }
             }
         }.execute();
     }

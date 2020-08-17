@@ -12,7 +12,7 @@ import androidx.room.Update;
 public interface StockDAO {
 
     @Insert
-    Long insertTask(Stock stock);
+    Long insertTask(Stock stock) throws Exception;
 
     @Update
     void updateTask(Stock stock);
