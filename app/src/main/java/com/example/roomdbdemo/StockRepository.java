@@ -40,7 +40,7 @@ public class StockRepository {
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
                 if (error) {
-                    Toast.makeText(context, "Transaction Id Already Exists.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(context, "Transaction #" + stock.stockno + " Already Exists.", Toast.LENGTH_LONG).show();
                 }
                 else {
                     Toast.makeText(context, "Transaction #" + stock.stockno + " Added.", Toast.LENGTH_LONG).show();
