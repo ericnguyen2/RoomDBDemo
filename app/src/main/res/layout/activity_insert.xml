@@ -21,7 +21,7 @@
             android:id="@+id/edt_stockno"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Stock #"
+            android:hint="Transaction #"
             android:inputType="number"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="20sp" />
@@ -52,6 +52,45 @@
             android:inputType="numberDecimal"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/edt_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Date (mm/dd/yyyy)"
+            android:inputType="date"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/edt_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Type"
+            android:inputType="text"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp" />
+        
+        <RadioGroup
+            android:id="@+id/rgroup_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rbtn_buy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Buy"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/rbtn_sell"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sell" />
+
+        </RadioGroup>
 
         <Button
             android:id="@+id/btn_submit"

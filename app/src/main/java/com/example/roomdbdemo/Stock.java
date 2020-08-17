@@ -19,10 +19,18 @@ public class Stock {
     @ColumnInfo(name = "price")
     public Double price;
 
-    public Stock(int stockno, String ticker, Double quantity, Double price) {
+    @ColumnInfo(name = "date")
+    public String date;
+
+    @ColumnInfo(name = "type")
+    public String type;
+
+    public Stock(int stockno, String ticker, Double quantity, Double price, String date, String type) {
         this.stockno = stockno;
         this.ticker = ticker;
         this.quantity = quantity;
         this.price = price;
+        this.date = date;
+        this.type = type;
     }
 }

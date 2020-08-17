@@ -108,7 +108,9 @@ public class ViewActivity extends AppCompatActivity {
 
             for (Stock stock:stockArrayList_search) {
                 if (stock.ticker.toLowerCase(Locale.getDefault()).contains(charText)
-                || String.valueOf(stock.quantity).toLowerCase(Locale.getDefault()).contains(charText)) {
+                    || String.valueOf(stock.stockno).toLowerCase(Locale.getDefault()).contains(charText)
+                    //|| String.valueOf(stock.quantity).toLowerCase(Locale.getDefault()).contains(charText)
+                ) {
                     stockArrayList.add(stock);
                 }
             }

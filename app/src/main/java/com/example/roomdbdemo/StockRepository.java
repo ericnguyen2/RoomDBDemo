@@ -33,7 +33,8 @@ public class StockRepository {
             @Override
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
-                Toast.makeText(context, stock.ticker + " Added.", Toast.LENGTH_LONG).show();
+                //Toast.makeText(context, stock.ticker + " Added.", Toast.LENGTH_LONG).show();
+                Toast.makeText(context, "Transaction #" + stock.stockno + " Added.", Toast.LENGTH_LONG).show();
             }
         }.execute();
     }
@@ -65,5 +66,4 @@ public class StockRepository {
             }
         }.execute();
     }
-
 }

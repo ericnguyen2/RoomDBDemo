@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:background="#0288F3"
             android:padding="15dp"
-            android:text="Add Stock"
+            android:text="Add"
             android:textColor="#FFF"
             android:textSize="20sp" />
 
@@ -46,7 +46,7 @@
             android:layout_marginTop="20dp"
             android:background="#0288F3"
             android:padding="15dp"
-            android:text="View Portfolio"
+            android:text="View"
             android:textColor="#FFF"
             android:textSize="20sp" />
 
