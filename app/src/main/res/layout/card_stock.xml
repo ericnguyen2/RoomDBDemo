@@ -101,10 +101,11 @@
 
                 <ImageView
                     android:id="@+id/img_internet"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:layout_marginTop="5dp"
-                    android:src="@drawable/ic_baseline_public_24" />
+                    android:paddingRight="15dp"
+                    android:src="@drawable/stock" />
 
             </LinearLayout>
 
