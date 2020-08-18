@@ -96,6 +96,16 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
         int blue = random.nextInt(255);
         btn_title.setBackgroundColor(Color.rgb(red, green, blue));
 
+        img_internet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String ticker = dataset.get(position).ticker;
+                Intent intent = new Intent(context, InternetActivity.class);
+                intent.putExtra("ticker", ticker);
+                context.startActivity(intent);
+            }
+        });
+
         ll_card_stock.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
